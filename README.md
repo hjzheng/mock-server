@@ -1,6 +1,6 @@
 # mock-server
 
-### Usage
+### Usage just support Mac and Linux
 
 ```shell
 npm install fe-mock-server -g
@@ -51,7 +51,8 @@ module.exports = function(configurations) {
 			response: {
 				status: 200,
 				body: function(req) {
-					return _.find(users, { 'id': parseInt(req.params.id, 10)});
+					return _.find(users,
+					{ 'id': parseInt(req.params.id, 10)});
 				},
 				headers: {
 					'Content-Type': 'application/json'
@@ -102,7 +103,8 @@ module.exports = function(configurations) {
 				status: 200,
 				body: function(req) {
 					req.body.id = parseInt(req.params.id, 10);
-					var index = _.findIndex(users, { 'id': parseInt(req.params.id, 10)})
+					var index = _.findIndex(users,
+					    { 'id': parseInt(req.params.id, 10)})
 					users[index] = req.body;
 					return {success: true};
 				},
