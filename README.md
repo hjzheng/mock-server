@@ -6,7 +6,7 @@
 npm install fe-mock-server -g
 ```
 
-```
+```shell
 fe-mock-server --mock './mock/'
 ```
 
