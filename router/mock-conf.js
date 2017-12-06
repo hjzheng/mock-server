@@ -15,7 +15,7 @@ var configurations = {
 };
 
 if(argv.mock) {
-	fs.readdirSync(argv.mock).forEach(function (file) {
+	fs.readdirSync(path.join(argv.mock)).forEach(function (file) {
 		require(path.join(process.cwd(), argv.mock, file))(configurations);
 	});
 }
