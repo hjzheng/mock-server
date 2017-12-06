@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+var argv = require('yargs').argv;
 var express = require('express');
 var server = express();
 var bodyParser = require('body-parser');
@@ -16,8 +17,11 @@ server.get('/echo', function(req, res) {
 	res.jsonp(req.query);
 });
 
-server.use(mockRouter);
+var apiPrefix = argv['api-prefix'] || '/';
+var port = argv['port'] || 8989;
 
-server.listen(8989, function() {
-	console.log('mock server is running, please visit http://localhost:8989');
+server.use(apiPrefix, mockRouter);
+
+server.listen(port, function() {
+	console.log(`mock server is running, please visit http://localhost:${port}`);
 });
