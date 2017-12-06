@@ -1,13 +1,13 @@
 # mock-server
 
-### Usage just support Mac and Linux
+### Usage
 
 ```shell
 npm install fe-mock-server -g
 ```
 
 ```shell
-fe-mock-server --mock './mock/'
+fe-mock-server --mock './config/'
 ```
 
 About mock configuration file, please check [config](https://github.com/hjzheng/mock-server/tree/master/conf).
@@ -116,5 +116,3 @@ module.exports = function(configurations) {
 	]);
 }
 ```
-
-
