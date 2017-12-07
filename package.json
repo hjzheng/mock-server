@@ -1,7 +1,7 @@
 {
   "name": "fe-mock-server",
-  "version": "0.0.6",
-  "description": "",
+  "version": "0.0.7",
+  "description": "just a mock server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
