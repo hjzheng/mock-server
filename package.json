@@ -1,6 +1,6 @@
 {
   "name": "fe-mock-server",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "just a mock server",
   "main": "index.js",
   "scripts": {

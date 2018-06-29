@@ -10,7 +10,7 @@ npm install fe-mock-server -g
 ```
 
 ```shell
-fe-mock-server --mock './config/' --api-prefix '/api' --port 8989
+fe-mock-server --mock "./config/" --api-prefix "/api" --port 8989
 ```
 
 - --mock:  mock files's location
