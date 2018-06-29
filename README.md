@@ -1,5 +1,8 @@
 # mock-server
 
+[![npm version](https://img.shields.io/npm/v/fe-mock-server.svg?style=flat-square)](https://www.npmjs.com/package/fe-mock-server)
+[![npm downloads](https://img.shields.io/npm/dt/fe-mock-server.svg?style=flat-square)](https://www.npmjs.com/package/fe-mock-server)
+
 ### Usage
 
 ```shell
