@@ -130,10 +130,8 @@ module.exports = function(configurations) {
 
 #### 1. mock简单模式，模块文件导出一个对象
 
-+ 针对get请求，可以直接按照`[url]: data`的形式配置
++ 针对 get 请求，可以直接按照 `[url]: data` 的形式配置
 ```javascript
-// data.js
-
 module.exports = {
 	'/test': {
 		name: 'aa',
@@ -145,29 +143,28 @@ module.exports = {
 }
 ```
 
-+ 针对非get请求（支持get/post/delete/put）,按照`[url]: { [method]: data }`的形式配置
++ 针对非 get 请求（支持 get/post/delete/put ）,按照 `[url]: { [method]: data }` 的形式配置
 ```javascript
-// data.js
-
 module.exports = {
 	'/test':{
 		post: {
 			message: 'message from post'
 		},
 		delete: {},
-		get: 'lalal'
+		get: 'lalala'
 	}
 }
 ```
 
-+ 针对高级请求，需要对request和response做处理的，按照 `[url]: (req, res) => {}`的形式配置
++ 针对高级请求，需要对 request 和 response 做处理的，按照 `[url]: (req, res) => {}`的形式配置
 
 ```javascript
-// data.js
-
 module.exports = {
 	'/test': function(req, res) {
 		const query = req.query;
+		// 设置 header
+		res.set('Content-Type', 'text/html');
+		// 设置 返回状态
 		res.status(500);
 		return { message: 'This is internal error' }
 	},
@@ -182,7 +179,7 @@ module.exports = {
 }
 ```
 
-#### 2. mock兼容模式
+#### 2. mock 兼容模式
 > 在原有的配置方式中，可以兼容简单的配置模式。
 
 ```javascript
