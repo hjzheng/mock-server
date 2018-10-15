@@ -188,7 +188,6 @@ module.exports = {
 ```javascript
 module.exports = function (configurations) {
 	configurations.add([
-		// 获取集团卡列表
 		{
 			request: {
 				method: 'GET',
