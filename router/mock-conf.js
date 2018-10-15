@@ -16,7 +16,13 @@ var configurations = {
 
 if(argv.mock) {
 	fs.readdirSync(path.join(argv.mock)).forEach(function (file) {
-		require(path.join(process.cwd(), argv.mock, file))(configurations);
+		const target = require(path.join(process.cwd(), argv.mock, file));
+		// 扩展mock文件的导出值为function或者object
+		if (typeof target === 'function') {
+			target(configurations);
+		} else if (Object.prototype.toString.apply(target) === '[object Object]') {
+			configurations.add(target);
+		}
 	});
 }
 
