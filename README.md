@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/fe-mock-server.svg?style=flat-square)](https://www.npmjs.com/package/fe-mock-server)
 [![npm downloads](https://img.shields.io/npm/dt/fe-mock-server.svg?style=flat-square)](https://www.npmjs.com/package/fe-mock-server)
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 ### Usage
 
